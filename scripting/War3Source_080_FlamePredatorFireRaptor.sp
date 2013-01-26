@@ -332,7 +332,7 @@ public OnRaceChanged(client,oldrace,newrace)
 	if(newrace!=thisRaceID)
 	{
 		W3ResetAllBuffRace(client,thisRaceID);
-		War3_WeaponRestrictTo(client,thisRaceID,"");
+		//War3_WeaponRestrictTo(client,thisRaceID,"");
 		
 	}
 	else
@@ -341,7 +341,7 @@ public OnRaceChanged(client,oldrace,newrace)
 		
 	}
 	if(newrace == thisRaceID){
-		War3_WeaponRestrictTo(client,thisRaceID,"weapon_knife");
+		//War3_WeaponRestrictTo(client,thisRaceID,"weapon_knife");
 		if(ValidPlayer(client,true)){
 			GivePlayerItem(client, "weapon_knife");
 		}

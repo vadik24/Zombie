@@ -54,12 +54,12 @@ public OnRaceChanged(client,oldrace,newrace)
 	if(newrace!=thisRaceID){
 		W3ResetAllBuffRace(client,thisRaceID);
 		W3ResetPlayerColor(client,thisRaceID);
-		War3_WeaponRestrictTo(client,thisRaceID,"");
+		//War3_WeaponRestrictTo(client,thisRaceID,"");
 	}
 	if(newrace==thisRaceID)
 	{
 		bFlying[client]=false;
-		War3_WeaponRestrictTo(client,thisRaceID,"weapon_knife,weapon_hegrenade");
+		//War3_WeaponRestrictTo(client,thisRaceID,"weapon_knife,weapon_hegrenade");
 		if(ValidPlayer(client,true))
 		{
 			GivePlayerItem(client,"weapon_hegrenade");

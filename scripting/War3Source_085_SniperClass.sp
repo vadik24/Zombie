@@ -83,12 +83,12 @@ public OnRaceChanged(client,oldrace,newrace)
 {
 	if(newrace!=thisRaceID)
 	{
-		War3_WeaponRestrictTo( client, thisRaceID, "" );
+		//War3_WeaponRestrictTo( client, thisRaceID, "" );
 		W3ResetAllBuffRace(client,thisRaceID);
 	}
 	else
 	{
-		War3_WeaponRestrictTo( client, thisRaceID, "weapon_knife,weapon_awp,weapon_ssg08,weapon_sg550,weapon_g3sg1,weapon_deagle,weapon_glock,weapon_usp" );
+		//War3_WeaponRestrictTo( client, thisRaceID, "weapon_knife,weapon_awp,weapon_ssg08,weapon_sg550,weapon_g3sg1,weapon_deagle,weapon_glock,weapon_usp" );
 		if( IsPlayerAlive( client ) )
 		{
 			InitPassiveSkills( client );

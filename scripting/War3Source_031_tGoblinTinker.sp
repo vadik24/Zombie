@@ -94,12 +94,12 @@
     {
             if(newrace!=thisRaceID)
             {
-                    War3_WeaponRestrictTo(client,thisRaceID,"");
+                    //War3_WeaponRestrictTo(client,thisRaceID,"");
 					W3ResetAllBuffRace(client,thisRaceID);
             }
             if(newrace==thisRaceID)
             {
-                    War3_WeaponRestrictTo(client,thisRaceID,"weapon_knife");
+                   //War3_WeaponRestrictTo(client,thisRaceID,"weapon_knife");
             }
     }
      

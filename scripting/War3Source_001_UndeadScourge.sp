@@ -2,7 +2,7 @@
 
 #include <sourcemod>
 #include "W3SIncs/War3Source_Interface"
-
+#include <zr/infect.zr>
 public Plugin:myinfo = 
 {
     name = "War3Source - Race - Undead Scourge",
@@ -50,7 +50,28 @@ public OnUltimateCommand(client, race, bool:pressed)
     if(pressed && War3_GetRace(client) == thisRaceID && IsPlayerAlive(client) && !Silenced(client))
     {
         new ult_level = War3_GetSkillLevel(client, race, SKILL_SUICIDE);
-        ult_level > 0 ? ForcePlayerSuicide(client) : W3MsgUltNotLeveled(client);
+        if(ult_level > 0)
+		{
+			for(new i=1;i<=MaxClients;i++)
+			{
+				if(ValidPlayer(i,true))
+				{
+					if(ZR_IsClientHuman(client) && ZR_IsClientHuman(i))
+					{
+						ForcePlayerSuicide(client);
+					}
+					if(ZR_IsClientZombie(client) && ZR_IsClientZombie(i))
+					{
+						PrintHintText(client,"%T","Zombie cannot Suicide!",client);
+					}
+					
+				}
+			}
+		}
+		else
+		{
+			W3MsgUltNotLeveled(client);
+		}
     }
 }
 

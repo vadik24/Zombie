@@ -52,7 +52,7 @@ public OnWar3EventSpawn(client)
 {
 	if(War3_GetRace(client)==thisRaceID&&ValidPlayer(client,true))
 	{
-		War3_WeaponRestrictTo(client,thisRaceID,"weapon_knife,weapon_fiveseven");
+		//War3_WeaponRestrictTo(client,thisRaceID,"weapon_knife,weapon_fiveseven");
 		GivePlayerItem(client,"weapon_fiveseven");
 		HPbonus(client);
 	}
@@ -61,12 +61,12 @@ public OnRaceChanged(client,oldrace,newrace)
 {
 	if(newrace!=thisRaceID)
 	{
-		War3_WeaponRestrictTo(client,thisRaceID,"");
+		//War3_WeaponRestrictTo(client,thisRaceID,"");
 		W3ResetAllBuffRace(client,thisRaceID);
 	}
 	if(newrace==thisRaceID)
 	{
-		War3_WeaponRestrictTo(client,thisRaceID,"weapon_knife,weapon_fiveseven");
+		//War3_WeaponRestrictTo(client,thisRaceID,"weapon_knife,weapon_fiveseven");
 		if(ValidPlayer(client,true))
 		{
 			GivePlayerItem(client,"weapon_fiveseven");

@@ -242,7 +242,7 @@ public OnWar3EventSpawn(client)
 		}
 	}
 	else{
-		War3_WeaponRestrictTo(client,thisRaceID,"");
+		//War3_WeaponRestrictTo(client,thisRaceID,"");
 		Skeleton[client]=false;
 		//W3ResetAllBuff(client,thisRaceID);
 		W3ResetPlayerColor(client,thisRaceID);

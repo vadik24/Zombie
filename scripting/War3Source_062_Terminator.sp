@@ -104,7 +104,7 @@ public OnRaceChanged(client,oldrace,newrace)
 {
 	if(newrace!=thisRaceID)
 	{
-		War3_WeaponRestrictTo(client,thisRaceID, "");
+		//War3_WeaponRestrictTo(client,thisRaceID, "");
 		War3_SetAmmoControl(client, "");
 		W3ResetPlayerColor(client,thisRaceID);
 		W3ResetAllBuffRace(client,thisRaceID);
@@ -126,7 +126,7 @@ public OnRaceChanged(client,oldrace,newrace)
 		}
 		*/
 		//War3_WeaponRestrictTo(client,thisRaceID,"weapon_deagle");
-		War3_WeaponRestrictTo(client,thisRaceID,"weapon_deagle");
+		//War3_WeaponRestrictTo(client,thisRaceID,"weapon_deagle");
 		if(IsPlayerAlive(client)) bSuicided[client]=false;
 		if(ValidPlayer(client,true)) {
 			GivePlayerItem(client,"weapon_deagle");

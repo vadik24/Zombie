@@ -424,11 +424,11 @@ public OnRaceChanged(client,oldrace,newrace)
 		//if(War3_GetGame()!=Game_TF) 
 		W3ResetAllBuffRace(client,thisRaceID);
 		W3ResetPlayerColor(client,thisRaceID);
-		War3_WeaponRestrictTo(client,thisRaceID,"");
+		//War3_WeaponRestrictTo(client,thisRaceID,"");
 	}
 	if(newrace==thisRaceID)
 	{
-		War3_WeaponRestrictTo(client,thisRaceID,"weapon_knife");
+		//War3_WeaponRestrictTo(client,thisRaceID,"weapon_knife");
 		InitSkills(client);
 	}
 }

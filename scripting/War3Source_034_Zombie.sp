@@ -107,7 +107,7 @@ public OnRaceChanged(client,oldrace,newrace)
 	if(newrace==thisRaceID)
 	{
 		ActivateSkills(client);
-		War3_WeaponRestrictTo(client,thisRaceID,"weapon_knife");
+		//War3_WeaponRestrictTo(client,thisRaceID,"weapon_knife");
 	}
 }
 

@@ -209,12 +209,12 @@ public OnWar3LoadRaceOrItemOrdered2(num)
 public OnRaceChanged(client, oldrace, newrace)
 {
 	if(newrace != thisRaceID){
-		War3_WeaponRestrictTo(client,thisRaceID,"");
+		//War3_WeaponRestrictTo(client,thisRaceID,"");
 		W3ResetAllBuffRace(client,thisRaceID);
 
 	}
 	if(newrace == thisRaceID){
-		War3_WeaponRestrictTo(client,thisRaceID,"weapon_p250");
+		//War3_WeaponRestrictTo(client,thisRaceID,"weapon_p250");
 		War3_SetBuff(client,bDoNotInvisWeapon,thisRaceID,true);
 		if(ValidPlayer(client,true)){
 			//GivePlayerItem(client, "weapon_glock");

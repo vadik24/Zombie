@@ -85,7 +85,7 @@ public OnRaceChanged(client,oldrace,newrace)
 	if(newrace!=thisRaceID)
 	{
 		W3ResetAllBuffRace(client,thisRaceID);
-		War3_WeaponRestrictTo(client,thisRaceID,"");
+		//War3_WeaponRestrictTo(client,thisRaceID,"");
 		W3ResetAllBuffRace(client,thisRaceID);
 		//========new=========
 		War3_SetAmmoControl(client, "");
@@ -93,7 +93,7 @@ public OnRaceChanged(client,oldrace,newrace)
 	}
 	if(newrace==thisRaceID)
 	{
-		War3_WeaponRestrictTo(client,thisRaceID,"weapon_awp,weapon_smokegrenade");
+		//War3_WeaponRestrictTo(client,thisRaceID,"weapon_awp,weapon_smokegrenade");
 		if(ValidPlayer(client,true))
 		{
 			//GivePlayerItem(client,"weapon_awp");

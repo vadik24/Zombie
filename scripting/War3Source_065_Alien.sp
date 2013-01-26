@@ -255,7 +255,7 @@ public OnRaceChanged(client,oldrace,newrace)
 {
 	if(newrace!=thisRaceID) 
 	{
-		War3_WeaponRestrictTo(client,thisRaceID,"");
+		//War3_WeaponRestrictTo(client,thisRaceID,"");
 		W3ResetAllBuffRace(client,thisRaceID);	}
 	else 
 	{

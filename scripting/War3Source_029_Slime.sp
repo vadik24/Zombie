@@ -78,7 +78,7 @@ public OnRaceChanged(client, oldrace, newrace)
 {
 	if (newrace == thisRaceID)
 	{
-		War3_WeaponRestrictTo(client,thisRaceID,"weapon_knife");
+		//War3_WeaponRestrictTo(client,thisRaceID,"weapon_knife");
 		War3_SetBuff(client,bImmunitySkills,thisRaceID,true);
 		if(ValidPlayer(client,true)){
 			
@@ -95,7 +95,7 @@ public OnRaceChanged(client, oldrace, newrace)
 	}
 	else if (oldrace == thisRaceID)
 	{
-		War3_WeaponRestrictTo(client,thisRaceID,"");
+		//War3_WeaponRestrictTo(client,thisRaceID,"");
 		W3ResetAllBuffRace(client,thisRaceID);
 		W3SetPlayerColor(client,thisRaceID,255,255,255);
 	}

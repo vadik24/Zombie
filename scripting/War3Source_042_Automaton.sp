@@ -78,7 +78,7 @@ public OnWar3EventSpawn(client)
 	{
 		bAimMode[client] = false;
 		bConfMode[client] = false;
-		War3_WeaponRestrictTo(client,thisRaceID,"weapon_elite,weapon_knife");
+		//War3_WeaponRestrictTo(client,thisRaceID,"weapon_elite,weapon_knife");
 		GivePlayerItem(client, "weapon_elite");
 	}
 }
@@ -87,12 +87,12 @@ public OnRaceChanged(client,oldrace,newrace)
 {
 	if(newrace!=thisRaceID)
 	{
-		War3_WeaponRestrictTo(client,thisRaceID,"");
+		//War3_WeaponRestrictTo(client,thisRaceID,"");
 		W3ResetAllBuffRace(client,thisRaceID);
 	}
 	if(newrace==thisRaceID)
 	{
-		War3_WeaponRestrictTo(client,thisRaceID,"weapon_elite,weapon_knife");
+		//War3_WeaponRestrictTo(client,thisRaceID,"weapon_elite,weapon_knife");
 		if(ValidPlayer(client))
 		{
 			GivePlayerItem(client, "weapon_elite");
@@ -163,7 +163,7 @@ public OnW3TakeDmgAllPre(victim,attacker,Float:damage)
 					{
 						new String:wep_check[64];
 						War3_CachedDeadWeaponName(victim,CS_SLOT_PRIMARY,wep_check,sizeof[wep_check]);
-						War3_WeaponRestrictTo(attacker,thisRaceID,"%s,weapon_elite,weapon_knife",wep_check);
+						//War3_WeaponRestrictTo(attacker,thisRaceID,"%s,weapon_elite,weapon_knife",wep_check);
 						GivePlayerItem(attacker,wep_check);
 						FakeClientCommand(attacker,"use %s",wep_check);
 						CreateTimer(ConfiscationDuration[skill_level_conf],StandardMode,attacker);
@@ -189,7 +189,7 @@ public OnW3TakeDmgAllPre(victim,attacker,Float:damage)
 							W3DropWeapon(victim,VWeapon);
 							decl String:WeaponsList[64];
 							Format(WeaponsList,sizeof(WeaponsList),"%s,weapon_elite,weapon_knife",WeaponName);
-							War3_WeaponRestrictTo(attacker,thisRaceID,WeaponsList);
+							//War3_WeaponRestrictTo(attacker,thisRaceID,WeaponsList);
 							GivePlayerItem(attacker,WeaponName);
 							FakeClientCommand(attacker,"use %s",WeaponName);
 							CreateTimer(ConfiscationDuration[skill_level_conf],StandardMode,attacker);
@@ -218,7 +218,7 @@ public Action:StandardMode(Handle:timer,any:client)
 		iWeapon = GetPlayerWeaponSlot(client,CS_SLOT_PRIMARY);
 		if (iWeapon != -1)
 			RemovePlayerItem(client,iWeapon);
-		War3_WeaponRestrictTo(client,thisRaceID,"weapon_elite,weapon_knife");
+		//War3_WeaponRestrictTo(client,thisRaceID,"weapon_elite,weapon_knife");
 		FakeClientCommand(client,"use weapon_elite");
 	}
 }
@@ -310,7 +310,7 @@ public OnUltimateCommand(client,race,bool:pressed)
 					PrintHintText(client,"%T","[Auto-Aim] Automatical Aiming Mode detected enemy! Kill him!",client);
 				}
 				bAimMode[client] = true;
-				War3_WeaponRestrictTo(client,thisRaceID,"weapon_sg550,weapon_elite,weapon_knife");
+				//War3_WeaponRestrictTo(client,thisRaceID,"weapon_sg550,weapon_elite,weapon_knife");
 				GivePlayerItem(client,"weapon_sg550");
 				// War3_DamageModPercent(5.0);
 				FakeClientCommand(client,"use weapon_sg550");

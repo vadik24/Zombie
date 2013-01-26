@@ -59,7 +59,7 @@ public OnRaceChanged(client, oldrace, newrace)
 {
 	if (newrace == thisRaceID)
 	{
-		War3_WeaponRestrictTo(client,thisRaceID,"weapon_knife");
+		//War3_WeaponRestrictTo(client,thisRaceID,"weapon_knife");
 		if(ValidPlayer(client,true))
 		{
 			GivePlayerItem(client, "weapon_knife");
@@ -67,7 +67,7 @@ public OnRaceChanged(client, oldrace, newrace)
 	}
 	else if (oldrace == thisRaceID)
 	{
-		War3_WeaponRestrictTo(client,thisRaceID,"");
+		//War3_WeaponRestrictTo(client,thisRaceID,"");
 		W3ResetAllBuffRace(client, thisRaceID);
 	}
 }
@@ -79,7 +79,7 @@ public OnWar3EventSpawn(client)
 	War3_SetBuff(client,bImmunitySkills,thisRaceID,false);
 	if (War3_GetRace(client) == thisRaceID)
 	{
-		War3_WeaponRestrictTo(client,thisRaceID,"weapon_knife");
+		//War3_WeaponRestrictTo(client,thisRaceID,"weapon_knife");
 		GivePlayerItem(client,"weapon_knife");
 		War3_SetBuff(client,fMaxSpeed,thisRaceID,1.3);
 	}
@@ -235,7 +235,7 @@ public OnAbilityCommand(client,ability,bool:pressed)
 											War3_DealDamage(i,tclapdamage[skill_level],client,DMG_CRUSH,"thunder clap",_,W3DMGTYPE_MAGIC);
 											War3_SetBuff(i,fMaxSpeed,thisRaceID,0.5);
 											CreateTimer(3.0,tclapslow,i);
-											War3_WeaponRestrictTo(i,thisRaceID,"weapon_knife",2);
+											//War3_WeaponRestrictTo(i,thisRaceID,"weapon_knife",2);
 											CreateTimer(1.0,regainweapons,i);
 										}
 									}
@@ -260,7 +260,7 @@ public Action:tclapslow(Handle:timer,any:i)
 
 public Action:regainweapons(Handle:timer,any:i)
 {
-	War3_WeaponRestrictTo(i,thisRaceID,"");
+	//War3_WeaponRestrictTo(i,thisRaceID,"");
 }
 
 public Action:overheal(Handle:timer,any:a)

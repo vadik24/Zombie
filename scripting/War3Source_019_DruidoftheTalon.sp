@@ -68,11 +68,11 @@ public OnRaceChanged(client,oldrace,newrace)
 {
 	if(newrace!=thisRaceID){
 		W3ResetAllBuffRace(client,thisRaceID);
-		War3_WeaponRestrictTo(client,thisRaceID,"");
+		//War3_WeaponRestrictTo(client,thisRaceID,"");
 	}
 	else
 	{
-		War3_WeaponRestrictTo(client,thisRaceID,"weapon_knife");
+		//War3_WeaponRestrictTo(client,thisRaceID,"weapon_knife");
 		if(IsPlayerAlive(client)){
 			bFlying[client]=false;
 			GivePlayerItem(client, "weapon_knife");
@@ -296,7 +296,7 @@ public Action:returnform(Handle:h, any:client)
 		bFlying[client]=false;
 		War3_SetBuff(client,bFlyMode,thisRaceID,false);
 		PrintHintText(client,"%T","Elf Form!",client);
-		War3_WeaponRestrictTo(client,thisRaceID,"weapon_knife");
+		//War3_WeaponRestrictTo(client,thisRaceID,"weapon_knife");
 		GivePlayerItem(client, "weapon_knife");
 		if(GetClientTeam(client)==3)
 		{

@@ -94,10 +94,10 @@ public OnRaceChanged(client,oldrace,newrace)
 {
 	if(newrace!=thisRaceID){
 		W3ResetAllBuffRace(client,thisRaceID);
-		War3_WeaponRestrictTo(client,thisRaceID,"");
+		//War3_WeaponRestrictTo(client,thisRaceID,"");
 	}
 	if(newrace==thisRaceID){
-		War3_WeaponRestrictTo(client,thisRaceID,"weapon_m249");
+		//War3_WeaponRestrictTo(client,thisRaceID,"weapon_m249");
 		if(ValidPlayer(client,true))
 		{
 			/*new ClientTeam = GetClientTeam(client);

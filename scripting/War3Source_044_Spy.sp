@@ -112,12 +112,12 @@ public OnRaceChanged(client,oldrace,newrace)
 	if(newrace!=thisRaceID)
 	{
 		//bTeleported[client]=true;
-		War3_WeaponRestrictTo(client,thisRaceID, "");
+		//War3_WeaponRestrictTo(client,thisRaceID, "");
 		W3ResetAllBuffRace(client,thisRaceID);
 	}
 	else
 	{	
-		War3_WeaponRestrictTo(client,thisRaceID,"weapon_glock,weapon_hkp2000");
+		//War3_WeaponRestrictTo(client,thisRaceID,"weapon_glock,weapon_hkp2000");
 		if(ValidPlayer(client,true))
 		{
 			if(GetClientTeam(client)==3)

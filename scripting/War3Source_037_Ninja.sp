@@ -173,7 +173,7 @@ public OnRaceChanged(client,oldrace,newrace)
 {
 	if(newrace!=thisRaceID)
 	{
-		War3_WeaponRestrictTo(client,thisRaceID, "");
+		//War3_WeaponRestrictTo(client,thisRaceID, "");
 		W3ResetAllBuffRace(client,thisRaceID);
 		W3ResetPlayerColor(client,thisRaceID);
 	}
@@ -181,7 +181,7 @@ public OnRaceChanged(client,oldrace,newrace)
 	{
 		ActivateSkills(client);
 		//SetEntityModel(client, NinjaMdl);
-		War3_WeaponRestrictTo(client,thisRaceID, "weapon_knife");
+		//War3_WeaponRestrictTo(client,thisRaceID, "weapon_knife");
 		new ClientTeam = GetClientTeam(client);
 		if(ClientTeam==3)
 		{
